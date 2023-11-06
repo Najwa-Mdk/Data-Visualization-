@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { Bar } from 'react-chartjs-2';
 import { setPeriod } from '../redux/actions';
+import Chart from 'chart.js/auto';
 
 const DataVisualization = ({ selectedPeriod }) => {
     const [products, setProducts] = useState([]);
@@ -31,8 +32,8 @@ const DataVisualization = ({ selectedPeriod }) => {
   const chartOptions = {
     scales: {
         y: {
-          beginAtZero: true,
-          max: 5, 
+            beginAtZero: true,
+            max: 5, 
         },
       },
     };
